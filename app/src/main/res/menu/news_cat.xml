@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menu_cat_filter"
+        android:title="Categories"
+        android:icon="@drawable/ic_view_list_black_24dp"
+        app:showAsAction="always">
+        <menu>
+            <item
+                android:id="@+id/nav_vvcshare"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Categories" />
+        </menu>
+    </item>
+</menu>

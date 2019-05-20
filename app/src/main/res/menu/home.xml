@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menu_news_sources"
+        android:title="News Sources"
+        android:icon="@drawable/ic_tune_black_24dp"
+        app:showAsAction="always">
+        <!--<menu>-->
+            <!--<item-->
+                <!--android:id="@+id/nav_share"-->
+                <!--android:icon="@drawable/ic_menu_share"-->
+                <!--android:title="Share" />-->
+        <!--</menu>-->
+    </item>
+    <item
+        android:id="@+id/menu_cat_filter"
+        android:title="Categories"
+        android:icon="@drawable/ic_view_list_black_24dp"
+        app:showAsAction="ifRoom">
+    </item>
+    <item
+        android:id="@+id/menu_refresh"
+        android:title="Refresh"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/menu_bookmarks"
+        android:title="Bookmarks"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/menu_settings"
+        android:title="@string/action_settings"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/menu_about_app"
+        android:title="About"
+        app:showAsAction="never" />
+</menu>

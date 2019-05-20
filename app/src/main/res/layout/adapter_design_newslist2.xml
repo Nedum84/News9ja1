@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/design_bottom_border"
+    android:id="@+id/newsListWrapper"
+    android:orientation="horizontal">
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        android:padding="5dp"
+        android:layout_gravity="center_vertical"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/headlineNewsTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textStyle="bold"
+            android:textColor="#424242"
+            android:textSize="15sp"
+            android:text="Introduction to the physical to the physical to the physical to the physical " />
+        <TextView
+            android:id="@+id/headlineNewsSource"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#555"
+            android:textSize="13sp"
+            android:textStyle="italic"
+            android:text="www.sunnewsonline.com"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_height="wrap_content">
+            <android.support.v7.widget.AppCompatImageView
+                app:srcCompat="@drawable/ic_access_time_black_24dp"
+                android:layout_width="18dp"
+                android:layout_height="wrap_content"
+                android:padding="1dp" />
+            <TextView
+                android:id="@+id/headlineNewsDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:textSize="13sp"
+                android:textColor="#616161"
+                android:paddingRight="5dp"
+                android:paddingEnd="5dp"
+                android:text="Feb 12, 2019" />
+            <android.support.v7.widget.AppCompatImageView
+                app:srcCompat="@drawable/ic_remove_red_eye_black_24dp"
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:padding="1dp" />
+            <TextView
+                android:id="@+id/headlineNewsNoOfViews"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:textSize="13sp"
+                android:textColor="#616161"
+                android:text="2313" />
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/headlineNewsBookmarkStatus"
+                app:srcCompat="@drawable/ic_bookmark_border_black_24dp"
+                android:layout_width="23dp"
+                android:layout_height="wrap_content"
+                android:padding="2dp" />
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/headlineNewsHide"
+                app:srcCompat="@drawable/ic_clear_black_24dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:padding="2dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <android.support.v7.widget.AppCompatImageView
+        app:srcCompat="@drawable/ic_menu_gallery"
+        android:id="@+id/headlineNewsImg"
+        android:layout_width="0dp"
+        android:layout_weight="2"
+        android:layout_height="match_parent"
+        android:padding="0dp" />
+
+
+</LinearLayout>

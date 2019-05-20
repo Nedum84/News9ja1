@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/newsListWrapper"
+    android:layout_alignParentBottom="true"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#83000000"
+    android:padding="10dp"
+    android:layout_marginBottom="1px"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.AppCompatImageView
+        app:srcCompat="@drawable/ic_menu_gallery"
+        android:id="@+id/headlineNewsImg"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="0dp" />
+    <TextView
+        android:id="@+id/headlineNewsTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:textStyle="bold"
+        android:textColor="#fff"
+        android:textSize="15sp"
+        android:text="Introduction to the physical to the physical to the physical to the physical " />
+    <TextView
+        android:id="@+id/headlineNewsSource"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#ddd"
+        android:textSize="13sp"
+        android:textStyle="italic"
+        android:text="www.sunnewsonline.com"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_height="wrap_content">
+        <android.support.v7.widget.AppCompatImageView
+            app:srcCompat="@drawable/ic_access_time_white_24dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="2dp" />
+        <TextView
+            android:id="@+id/headlineNewsDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textSize="12sp"
+            android:textColor="#eee"
+            android:paddingRight="8dp"
+            android:paddingEnd="8dp"
+            android:text="Feb 12, 2019" />
+        <android.support.v7.widget.AppCompatImageView
+            app:srcCompat="@drawable/ic_remove_red_eye_white_24dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="2dp" />
+        <TextView
+            android:id="@+id/headlineNewsNoOfViews"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textSize="14sp"
+            android:textColor="#eee"
+            android:text="2313" />
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/headlineNewsBookmarkStatus"
+            app:srcCompat="@drawable/ic_bookmark_border_black_24dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="8dp" />
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/headlineNewsHide"
+            app:srcCompat="@drawable/ic_clear_white_24dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp" />
+
+    </LinearLayout>
+
+</LinearLayout>
