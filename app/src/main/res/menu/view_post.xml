@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menu_share_post"
+        android:title="@string/share_post"
+        android:icon="@drawable/ic_share_black_24dp"
+        app:showAsAction="always">
+    </item>
+    <item
+        android:id="@+id/menu_latest_news"
+        android:title="Latest News"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/menu_login"
+        android:title="Login"
+        app:showAsAction="never" />
+</menu>

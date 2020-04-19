@@ -1,77 +1,139 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<androidx.coordinatorlayout.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/l_and_q_wrapper"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#eee"
+    android:id="@+id/l_and_q_wrapper"
     tools:context=".ActivityHome"
-    android:orientation="vertical">
-    <android.support.design.widget.AppBarLayout
+    android:background="#eee"
+    android:fitsSystemWindows="true">
+
+    <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay">
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
-        <android.support.v7.widget.Toolbar
+        <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:gravity="center_horizontal"
             android:background="?attr/colorPrimary"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:layout_scrollFlags="scroll|enterAlways"
             app:title=" "
-            app:popupTheme="@style/AppTheme.PopupOverlay" >
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
             <ImageView
-                android:id="@+id/drer"
-                android:layout_width="40dp"
-                app:srcCompat="@drawable/ic_wifi_tethering_black_24dp"
-                android:layout_height="40dp" />
+                android:id="@+id/app_logo"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:srcCompat="@drawable/n9_logo1"
+                tools:ignore="ContentDescription" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="20sp"
-                android:textColor="#eee"
-                android:paddingLeft="10dp"
-                android:paddingStart="10dp"
+                android:textColor="#fff"
+                android:paddingLeft="4dp"
+                android:paddingStart="4dp"
                 android:ellipsize="end"
+                android:textStyle="bold"
                 android:maxLines="1"
-                android:text="9ja News Update"/>
-        </android.support.v7.widget.Toolbar>
+                android:text="@string/app_name"/>
+        </androidx.appcompat.widget.Toolbar>
 
-    </android.support.design.widget.AppBarLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:orientation="vertical"
-        android:layout_height="match_parent">
-        <ImageView
-            android:id="@+id/testImgBitmap"
-            android:layout_width="wrap_content"
-            app:srcCompat="@drawable/ic_bookmark_border_black_24dp"
-            android:layout_height="wrap_content" />
-
-        <android.support.design.widget.TabLayout
+        <com.google.android.material.tabs.TabLayout
             android:id="@+id/news_tabs"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#cdcdcd"
-            app:tabTextColor="#616161"
-            app:tabIndicatorColor="@color/colorPrimary"
+            android:background="@android:color/transparent"
+            app:tabTextColor="#d7ccc8"
+            app:tabIndicatorColor="@color/colorAshBg"
             app:tabGravity="fill"
-            app:tabRippleColor="#bdbdbd"
+            app:tabRippleColor="#eee"
             app:tabIndicatorAnimationDuration="200"
-            app:tabSelectedTextColor="#212121"
+            app:tabSelectedTextColor="#FFF"
             app:tabTextAppearance="@style/TabLayoutTextStyle"
             app:tabIndicatorHeight="4dp"
             app:tabMode="scrollable"
+            android:visibility="gone"
             />
+        <!--<android.support.design.widget.TabLayout-->
+            <!--android:id="@+id/news_tabs"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:background="#cdcdcd"-->
+            <!--app:tabTextColor="#616161"-->
+            <!--app:tabIndicatorColor="@color/colorPrimary"-->
+            <!--app:tabGravity="fill"-->
+            <!--app:tabRippleColor="#bdbdbd"-->
+            <!--app:tabIndicatorAnimationDuration="200"-->
+            <!--app:tabSelectedTextColor="@color/colorPrimary2"-->
+            <!--app:tabTextAppearance="@style/TabLayoutTextStyle"-->
+            <!--app:tabIndicatorHeight="4dp"-->
+            <!--app:tabMode="scrollable" />-->
 
-        <android.support.v4.view.ViewPager
-            android:id="@+id/view_pager"
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F5F5F5"
+        android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            />
-    </LinearLayout>
+            android:orientation="vertical">
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/view_pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                    android:paddingStart="0dp"
+                    android:paddingLeft="0dp"
+                    android:paddingRight="0dp"
+                    android:paddingEnd="0dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="true"/>
+            <!--<TextView-->
+                <!--android:id="@+id/refreshPage"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:visibility="gone"-->
+                <!--android:text="9+ more news"-->
+                <!--android:layout_centerHorizontal="true"-->
+                <!--android:layout_alignParentBottom="true"-->
+                <!--android:layout_marginBottom="90dp"-->
+                <!--android:background="@drawable/design_border_radius_for_load_more"-->
+                <!--android:padding="8dp"-->
+                <!--android:textColor="#FFF"/>-->
+
+            <TextView
+                android:id="@+id/tapToSetup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:layout_marginBottom="120dp"
+                android:background="@drawable/design_border_radius_for_load_more"
+                android:padding="8dp"
+                android:text="Set up is required, Tap to retry"
+                android:visibility="gone"
+                android:textAlignment="center"
+                android:textColor="#FFF"
+                android:textSize="16sp" />
+
+            <!--android:layout_centerHorizontal="true"-->
+            <include
+                layout="@layout/inc_network_error_page"/>
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
 
 
-</LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

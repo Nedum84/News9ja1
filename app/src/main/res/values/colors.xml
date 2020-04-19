@@ -3,7 +3,11 @@
     <color name="colorPrimary">#d50000</color>
     <color name="colorPrimaryDark">#b71c1c</color>
     <color name="colorAccent">#D81B60</color>
+
+    <color name="colorPrimary2">#A02329</color>
+    <color name="colorAccent2">#FF514A</color>
     <color name="colorAshBg">#DFE3E6</color>
     <color name="colorAshBg2">#e0e0e0</color>
+    <color name="colorPinkLike">#b71c1c</color>
 
 </resources>

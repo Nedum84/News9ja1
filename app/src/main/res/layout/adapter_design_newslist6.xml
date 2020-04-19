@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/design_bottom_border"
+    android:id="@+id/newsListWrapper"
+    android:orientation="vertical"
+    android:padding="8dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+        <ImageView
+            app:srcCompat="@drawable/ic_menu_gallery"
+            android:id="@+id/headlineNewsImg"
+            android:layout_alignParentTop="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="0dp"
+            android:scaleType="centerCrop"/>
+
+
+
+        <LinearLayout
+            android:id="@+id/newsDetailsWrapper"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#83000000"
+            android:padding="10dp"
+            android:gravity="bottom"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/headlineNewsSource"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#eee"
+                    android:textSize="14sp"
+                    android:background="#d84315"
+                    android:padding="5dp"
+                    android:paddingStart="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingEnd="10dp"
+                    android:paddingRight="10dp"
+                    android:layout_margin="5dp"
+                    android:textStyle="bold"
+                    android:text="Sun News" />
+                <TextView
+                    android:id="@+id/headlineNewsDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="12sp"
+                    android:textColor="#eee"
+                    android:paddingRight="8dp"
+                    android:paddingEnd="8dp"
+                    android:text="Feb 12, 2019" />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/headlineNewsTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:textStyle="bold"
+                android:textColor="#fff"
+                android:textSize="16sp"
+                android:text="Introduction to the physical to the physical to the physical to the physical " />
+            <TextView
+                android:id="@+id/headlineNewsCat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:maxLines="1"
+                android:text="In Politics"
+                android:visibility="gone"/>
+            <ImageView
+                app:srcCompat="@drawable/ic_menu_gallery"
+                android:id="@+id/newsSourceIcon"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:visibility="gone"
+                android:scaleType="centerCrop" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                >
+                <ImageView
+                    app:srcCompat="@drawable/ic_access_time_white_24dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="2dp" />
+                <ImageView
+                    app:srcCompat="@drawable/ic_comment_black_24dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="2dp" />
+                <TextView
+                    android:id="@+id/headlineNewsNoOfViews"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="14sp"
+                    android:textColor="#eee"
+                    android:text="23" />
+                <ImageView
+                    android:id="@+id/headlineNewsBookmarkStatus"
+                    app:srcCompat="@drawable/ic_bookmark_border_black_24dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="8dp" />
+                <ImageView
+                    android:id="@+id/headlineNewsHide"
+                    app:srcCompat="@drawable/ic_clear_white_24dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/loadMore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Read More"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:padding="10dp"
+            android:textColor="#666"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_chevron_right_black_24dp"
+            tools:ignore="ContentDescription"
+            android:layout_marginLeft="-15dp"
+            android:layout_marginStart="-15dp"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_chevron_right_black_24dp"
+            tools:ignore="ContentDescription"
+            android:layout_marginLeft="-19dp"
+            android:layout_marginStart="-19dp"/>
+    </LinearLayout>
+
+</LinearLayout>

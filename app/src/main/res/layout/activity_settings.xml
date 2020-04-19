@@ -1,0 +1,506 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ActivitySettings">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@android:color/transparent"
+            app:layout_collapseMode="pin"
+            app:title="Settings"
+            app:subtitleTextColor="@color/colorAshBg"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:navigationIcon="?attr/homeAsUpIndicator"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F5F5F5"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+            <!--General-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="General"
+                style="@style/TextviewTitle"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:background="@drawable/design_video_bottom_border"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    app:srcCompat="@drawable/ic_label_black_24dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:paddingEnd="10dp"
+                    android:paddingRight="10dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="18sp"
+                    android:textColor="#444"
+                    android:layout_weight="1"
+                    android:text="Enable Offline Mode"/><!--News auto-download-->
+
+                <!--<CheckBox-->
+                    <!--android:id="@+id/auto_download_news"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"/>-->
+                <Switch
+                    android:id="@+id/auto_download_news"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:layout_editor_absoluteX="151dp"
+                    tools:layout_editor_absoluteY="109dp" />
+
+            </LinearLayout><!--Auto-Download News of Interest-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:background="@drawable/design_video_bottom_border"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    app:srcCompat="@drawable/ic_label_black_24dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:paddingEnd="10dp"
+                    android:paddingRight="10dp"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="18sp"
+                    android:textColor="#444"
+                    android:layout_weight="1"
+                    android:text="News Image auto-download"/>
+
+                <!--<CheckBox-->
+                    <!--android:id="@+id/auto_download_news_imgs"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"/>-->
+                <Switch
+                    android:id="@+id/auto_download_news_imgs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:layout_editor_absoluteX="151dp"
+                    tools:layout_editor_absoluteY="109dp" />
+
+            </LinearLayout><!--Auto-Download  Image-->
+            <LinearLayout
+                android:id="@+id/remove_unwanted_news_cat"
+                android:layout_width="match_parent"
+                android:background="@drawable/design_video_bottom_border"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    app:srcCompat="@drawable/ic_label_black_24dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:paddingEnd="10dp"
+                    android:paddingRight="10dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="18sp"
+                    android:textColor="#444"
+                    android:layout_weight="1"
+                    android:text="Filter News Categories"/>
+
+            </LinearLayout><!--Select Categories of Interest-->
+            <LinearLayout
+                android:id="@+id/remove_unwanted_news_sources"
+                android:layout_width="match_parent"
+                android:background="@drawable/design_video_bottom_border"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    app:srcCompat="@drawable/ic_label_black_24dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:paddingEnd="10dp"
+                    android:paddingRight="10dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="18sp"
+                    android:textColor="#444"
+                    android:layout_weight="1"
+                    android:text="Filter Newspapers"/>
+
+            </LinearLayout><!--Select News Sources of Interest-->
+            <LinearLayout
+                android:id="@+id/news_synchronization_interval"
+                android:layout_width="match_parent"
+                android:background="@drawable/design_video_bottom_border"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    app:srcCompat="@drawable/ic_label_black_24dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:paddingEnd="10dp"
+                    android:paddingRight="10dp"
+                    tools:ignore="ContentDescription" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="18sp"
+                    android:textColor="#444"
+                    android:layout_weight="1">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:textSize="18sp"
+                        android:textColor="#444"
+                        android:text="News Sync interval"/>
+                    <TextView
+                        android:id="@+id/news_sync_interval_display"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textColor="#444"
+                        android:text="2 Minutes"/>
+                </LinearLayout>
+
+
+            </LinearLayout><!--Update Sync interval-->
+
+            <LinearLayout
+                android:id="@+id/update_to_latest_vercxsion"
+                android:layout_width="match_parent"
+                android:background="@drawable/design_video_bottom_border"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <ImageView
+                    app:srcCompat="@drawable/ic_label_black_24dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:paddingEnd="10dp"
+                    android:paddingRight="10dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="18sp"
+                    android:textColor="#444"
+                    android:layout_weight="1"
+                    android:text="Refresh News on Double Click of Open Tab"/>
+
+                <Switch
+                    android:id="@+id/refresh_on_db_click"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:layout_editor_absoluteX="151dp"
+                    tools:layout_editor_absoluteY="109dp" />
+
+            </LinearLayout>
+            <!--Notification-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Notifications"
+                style="@style/TextviewTitle"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:background="@drawable/design_video_bottom_border"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    app:srcCompat="@drawable/ic_label_black_24dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:paddingEnd="10dp"
+                    android:paddingRight="10dp"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="18sp"
+                    android:textColor="#444"
+                    android:layout_weight="1"
+                    android:text="Get Notification on News Updates"/>
+
+                <CheckBox
+                    android:id="@+id/get_notification"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout><!--get notication on news update-->
+            <LinearLayout
+                android:id="@+id/notification_mode"
+                android:layout_width="match_parent"
+                android:background="@drawable/design_video_bottom_border"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    app:srcCompat="@drawable/ic_label_black_24dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:paddingEnd="10dp"
+                    android:paddingRight="10dp"
+                    tools:ignore="ContentDescription" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="18sp"
+                    android:textColor="#444"
+                    android:layout_weight="1">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:textSize="18sp"
+                        android:textColor="#444"
+                        android:text="Notification Mode"/>
+                    <TextView
+                        android:id="@+id/notification_mode_display"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textColor="#444"
+                        android:text="In batch"/>
+                </LinearLayout>
+
+
+            </LinearLayout><!--notification mode-->
+
+
+
+            <!--Storage Management-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Manage Storage"
+                style="@style/TextviewTitle"/>
+
+            <LinearLayout
+                android:id="@+id/delete_old_news_interval"
+                android:layout_width="match_parent"
+                android:background="@drawable/design_video_bottom_border"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    app:srcCompat="@drawable/ic_label_black_24dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:paddingEnd="10dp"
+                    android:paddingRight="10dp"
+                    tools:ignore="ContentDescription" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="18sp"
+                    android:textColor="#444"
+                    android:layout_weight="1">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:textSize="18sp"
+                        android:textColor="#444"
+                        android:text="Delete Offline News"/>
+                    <TextView
+                        android:id="@+id/delete_old_news_interval_display"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textColor="#444"
+                        android:text="After 2days"/>
+                </LinearLayout>
+
+
+            </LinearLayout><!--auto delete news after some interval-->
+            <LinearLayout
+                android:id="@+id/clear_bookmarks"
+                android:layout_width="match_parent"
+                android:background="@drawable/design_video_bottom_border"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    app:srcCompat="@drawable/ic_label_black_24dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:paddingEnd="10dp"
+                    android:paddingRight="10dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="18sp"
+                    android:textColor="#444"
+                    android:layout_weight="1"
+                    android:text="Clear Bookmarks"/>
+
+            </LinearLayout><!--Clear Bookmarks-->
+            <LinearLayout
+                android:id="@+id/erase_all_news"
+                android:layout_width="match_parent"
+                android:background="@drawable/design_video_bottom_border"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    app:srcCompat="@drawable/ic_label_black_24dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:paddingEnd="10dp"
+                    android:paddingRight="10dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="18sp"
+                    android:textColor="#444"
+                    android:layout_weight="1"
+                    android:text="Erase all the Offline News"/>
+
+            </LinearLayout><!--Erase all the Downloaded News-->
+
+            <!--Back Up-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Backup"
+                style="@style/TextviewTitle"/>
+
+            <LinearLayout
+                android:id="@+id/back_up_bookmarks"
+                android:layout_width="match_parent"
+                android:background="@drawable/design_video_bottom_border"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    app:srcCompat="@drawable/ic_label_black_24dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:paddingEnd="10dp"
+                    android:paddingRight="10dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="18sp"
+                    android:textColor="#444"
+                    android:layout_weight="1"
+                    android:text="Backup Bookmarks to server"/>
+
+            </LinearLayout><!--Backup Bookmarks-->
+            <LinearLayout
+                android:id="@+id/restore_bookmarks"
+                android:layout_width="match_parent"
+                android:background="@drawable/design_video_bottom_border"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    app:srcCompat="@drawable/ic_label_black_24dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:paddingEnd="10dp"
+                    android:paddingRight="10dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="18sp"
+                    android:textColor="#444"
+                    android:layout_weight="1"
+                    android:text="Restore Bookmarks from server"/>
+
+            </LinearLayout><!--Restore Bookmarks-->
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

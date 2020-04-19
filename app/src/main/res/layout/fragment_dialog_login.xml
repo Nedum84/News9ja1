@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorAshBg">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/close_dialog">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="15dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+            <LinearLayout
+                android:id="@+id/registerWrapper"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:visibility="gone"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Register your account"
+                    android:textColor="#222"
+                    android:textAlignment="center"
+                    android:textSize="24sp"/>
+
+                <!-- Email Label -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/design_border_all_sides_red"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="40dp"
+                        android:padding="9dp"
+                        tools:ignore="ContentDescription"
+                        android:background="@color/colorPinkLike"
+                        app:srcCompat="@drawable/ic_email_white_24dp"/>
+                    <EditText
+                        android:id="@+id/reg_email_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="text"
+                        android:background="@null"
+                        android:paddingLeft="10dp"
+                        android:paddingStart="10dp"
+                        android:hint="Email" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/design_border_all_sides_red"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="6dp"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="40dp"
+                        android:padding="10dp"
+                        tools:ignore="ContentDescription"
+                        android:background="@color/colorPinkLike"
+                        app:srcCompat="@drawable/ic_lock_outline_black_24dp"/>
+                    <EditText
+                        android:id="@+id/reg_password_new"
+                        android:inputType="text"
+                        android:hint="Password"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:paddingLeft="10dp"
+                        android:paddingStart="10dp"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/design_border_all_sides_red"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="6dp"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="40dp"
+                        android:padding="10dp"
+                        tools:ignore="ContentDescription"
+                        android:background="@color/colorPinkLike"
+                        app:srcCompat="@drawable/ic_lock_outline_black_24dp"/>
+                    <EditText
+                        android:id="@+id/reg_password_confirm"
+                        android:inputType="text"
+                        android:hint="Confirm Password"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:paddingLeft="10dp"
+                        android:paddingStart="10dp"/>
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btn_Register"
+                    style="@style/RegLogBtn"
+                    android:text="Register"
+                    android:textAllCaps="true"/>
+
+                <TextView
+                    android:id="@+id/clickToLogin"
+                    android:layout_width="match_parent"
+                    android:textAlignment="center"
+                    android:textSize="17sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Or, Click here to Login" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/loginWrapper"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Login"
+                    android:textColor="#222"
+                    android:textAlignment="center"
+                    android:textSize="24sp"/>
+
+                <!-- Email Label -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/design_border_all_sides_red"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="40dp"
+                        android:padding="9dp"
+                        tools:ignore="ContentDescription"
+                        android:background="@color/colorPinkLike"
+                        app:srcCompat="@drawable/ic_email_white_24dp"/>
+                    <EditText
+                        android:id="@+id/log_email_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="textEmailAddress"
+                        android:background="@null"
+                        android:paddingLeft="10dp"
+                        android:paddingStart="10dp"
+                        android:hint="Email Address" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/design_border_all_sides_red"
+                    android:layout_marginTop="6dp"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="40dp"
+                        android:padding="10dp"
+                        tools:ignore="ContentDescription"
+                        android:background="@color/colorPinkLike"
+                        app:srcCompat="@drawable/ic_lock_outline_black_24dp"/>
+                    <EditText
+                        android:id="@+id/log_password"
+                        android:inputType="text"
+                        android:hint="Password"
+                        android:background="@null"
+                        android:layout_margin="0dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingLeft="10dp"
+                        android:paddingStart="10dp"/>
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btn_Login"
+                    style="@style/RegLogBtn"
+                    android:text="Log me In"
+                    android:textAllCaps="true"/>
+
+                <TextView
+                    android:id="@+id/clickToRegister"
+                    android:layout_width="match_parent"
+                    android:textAlignment="center"
+                    android:textSize="17sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Or, Click here to Register" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/close_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CLOSE"
+        android:padding="10dp"
+        android:textColor="#888"
+        android:background="#ECF0F5"
+        android:textAlignment="center"
+        android:textSize="17sp"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>
